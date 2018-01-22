@@ -1,19 +1,93 @@
 ---
 layout: default
 ---
+
+<a id="home"></a>
 <div class="hero hero-home">
   <div class="hero-content">
-  <h1>HA NGUYEN</h1>
-  <ul class="social-media">
-    <li>
-      <a href="https://www.facebook.com/emma.nguyen28" class="social-link">fb</a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/ha-nguyen-8aba10154/" class="social-link">in</a>
-    </li>
-    <li>
-      <a href="https://github.com/emmanguyen28" class="social-link">gh</a>
-    </li>
-  </ul>
+    <h1>Hi, It's Ha here!</h1>
+    {% include social_links.html %}
+  </div>
 </div>
+
+<div class="one-page">
+<a id="about-me"></a>
+<div class="about-me">
+  <div class="first-col">
+    <img src="/images/Emma3.jpg" alt="Emma Nguyen">
+    {% include social_links.html %}
+  </div>
+  <div class="content-all second-col">
+    <h2>About me</h2>
+    <div class="just-content">
+      Hi everyone, it's Ha here, or call me Emma! I'm a Computer Science major at Mount Holyoke College, MA, USA (Math is also a dear to me). I love playing around with ideas. Building them, implementing them, destroying them, then building them from scratch. I am also interested in writing. It actually tore me apart to finish these writings you see here, but now I thought about it, I felt so happy to have produced these! I know, I know, it's a love-hate relationship. Anw, tldr; in this website I'll be updating my CS projects, and a chunk of others like writings, Math projects, or even my photography! Enjoy!!
+    </div>
+  </div>
+</div>
+
+<a id="cs-projects"></a>
+<div class="cs">
+<ul class="projects">
+
+  <li class="project">
+    <div class="project-content">
+    <h3 class="project-name">Bash</h3>
+    <p>Beautiful Bash. Check out my Bash at <a href="https://github.com/emmanguyen28/Bash-scripting">GitHub</a></p>
+  </div>
+  </li>
+
+  <li class="project">
+    <div class="project-content">
+    <h3 class="project-name">Java</h3>
+    <p>Can't live without Java. Check out my Java codes at <a href="https://github.com/emmanguyen28/Java-coding">GitHub</a></p>
+  </div>
+ </li>
+
+ <li class="project">
+   <div class="project-content">
+     <h3 class="project-name">C++</h3>
+     <p>One C++ to rule them all. Check out my C++ at <a href="https://github.com/emmanguyen28/Cplusplus">GitHub</a></p>
+   </div>
+ </li>
+</ul>
+</div>
+
+<div class="site" id="writings">
+  <div class="page blog-index">
+    <h1>Writings</h1>
+    <h5 class="note">I have always a fascination with writing, with its power to facilitate communication and understanding.</h5><br/>
+    <div class="col-two blog-cols">
+
+      <div class="col-aside blog-recent">
+        {% include recent-posts.html %}
+      </div>
+
+      <div class="col-content blog-previews">
+        {% for post in site.posts %}
+        <div class="blog-posts">
+          <header class="post-header">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <div class="post-byline">
+              <img src="{{ post.image }}" />
+              <a href="https://www.facebook.com/emma.nguyen28" class="social-link">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="https://github.com/emmanguyen28" class="social-link">
+                <i class="fa fa-github"></i>
+              </a>
+              written by: {{ post.author }}
+              <span> - {{ post.date | date: '%B, %d, %Y' }}</span>
+            </div>
+          </header>
+          <div class="posts-image" style="background-image:url({{ post.image }})">
+          </div class="post-excerpt">
+          {{ post.excerpt }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 </div>

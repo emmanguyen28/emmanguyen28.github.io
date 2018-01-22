@@ -9,7 +9,12 @@ layout: default
       <h2>{{ page.title }}</h2>
       <div class="post-byline">
         <img src="{{ page.image }}">
-        <a href="{{ page.authorFacebook }}" class="social-link">fb</a>
+        <a href="{{ page.authorFacebook }}" class="social-link">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="https://github.com/emmanguyen28" class="social-link">
+        <i class="fa fa-github"></i>
+      </a>
         written by: {{ page.author }}
         <span> - {{ page.date | date: '%B, %d, %Y'}}</span>
       </div>

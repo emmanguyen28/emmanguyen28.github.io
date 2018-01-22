@@ -7,12 +7,19 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Quattrocento Sans',helvetica, arial, sans-serif;
 }
 h4 {
   color: #999;
   font-weight: bold;
   text-transform: uppercase;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Questrial', helvetica, arial, sans-serif;
+}
+.one-page {
+  background-image: url(/images/bulb-balloon-minimalist-wallpaper-light.png);
+  background-size: auto;
 }
 
 /* HEADER STYLE */
@@ -22,8 +29,10 @@ h4 {
   background-color: #000;
   color: #fff;
   width: 100%;
-  height: 16vh;
+  height: 10vh;
   margin: 0;
+  position: fixed;
+  z-index: 30;
 }
 .content-container {
   flex: 1;
@@ -33,7 +42,7 @@ h4 {
 /* header navigation links */
 .header-nav {
   float: right;
-  padding: 6vh 3vh 0 0;
+  padding: 2vh 3vh 0 0;
 }
 .header-nav > li {
   display: inline-block;
@@ -74,6 +83,7 @@ h4 {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: 'Catamaran', 'Rubik', "Karla";
 }
 .nav-links a:hover,
 .nav-links a:active {
@@ -85,11 +95,16 @@ h4 {
   color: #000;
   padding: 10vh 0 8vh;
   text-align: center;
-  margin: 0;
+}
+.footer-components {
+  align-items: center;
 }
 .footer-logo img {
   width: 15vh;
+  height: 15vh;
+  border-radius: 17vh;
   margin-bottom: 2em;
+  align-items: center;
 }
 .footer h2 {
   color: #d83c78;
@@ -97,17 +112,19 @@ h4 {
   text-transform: uppercase;
   font-weight: bold;
 }
-.footer-nav li {
+.footer-nav {
+  margin-left: -2em;
+}
+.footer-nav > li  {
   display: inline-block;
   margin-left: 1em;
 }
 
 /*HERO STYLE */
 .hero {
-  background-color: #d3e8da;
+  background-color: #000;
   background-size: cover;
-  height: 84vh;
-  padding-top: 30vh;
+  height: 100vh;
   box-sizing: border-box;
   text-align: center;
 }
@@ -115,6 +132,7 @@ h4 {
   border: 10px solid;
 }
 .hero-home {
+  margin-top: 10vh;
   background-image: url(/images/IMG_2629.jpg);
   background-position: center top;
 }
@@ -122,9 +140,11 @@ h4 {
   text-align: center;
   color: #fff;
   position: relative;
-  text-transform: uppercase;
-  top: 40%;
+  top: 50%;
   transform: translate(0, -50%);
+}
+.hero-content h1 {
+  font-size: 4rem;
 }
 
 /* Style for social media links */
@@ -139,23 +159,25 @@ h4 {
   padding: 0;
 }
 .social-link {
-  background: rgba(150,150,150,0.5);
-  border-radius: 120px;
   box-sizing: border-box;
   color: #1d287f;
   display: inline-block;
   font-family: helvetica, arial, sans-serif;
   font-weight: bold;
-  height: 2.5em;
+  font-size: 2.5em;
   line-height: 1;
   padding: 0.7em;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  width: 2.5em;
 }
 
 /* BLOG STYLES */
+.site {
+  font-family: 'Crimson Text', helvetica, arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
 .col-two {
   display: flex;
 }
@@ -174,6 +196,7 @@ h4 {
 }
 .page h1 {
   font-size: 3em;
+  margin-top: 2em;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -187,12 +210,18 @@ h4 {
 .page h4 {
   margin-bottom: 1em;
 }
+.note {
+  font-family: 'Noto Serif', 'Crimson Text', sans-serif;
+  margin: -50px 0 15vh;
+  text-align: center;
+}
 
 /* Recent post style */
+
 /* .site {
-  background-image: url(/images/minimalist-wallpaper-5730-5895-hd-wallpapers.jpg);
-  background-position: center center;
-  background-size: cover;
+background-image: url(/images/minimalist-wallpaper-5730-5895-hd-wallpapers.jpg);
+background-position: center center;
+background-size: cover;
 }*/
 .blog-recent {
   text-align: right;
@@ -239,9 +268,11 @@ h4 {
 .post-header h2 {
   font-size: 2rem;;
 }
-
 .post {
   width: 100%;
+}
+.post-excerpt {
+  font-family: 'Crimson Text', helvetica, arial, sans-serif;
 }
 .post-footer {
   margin-top: 2em;
@@ -270,7 +301,92 @@ h4 {
 }
 .post-content {
   list-style: none;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-right: 1em;
   line-height: 2;
+  font-family: 'Crimson Text', helvetica, arial, sans-serif;
+}
+.post-byline img {
+  margin-right: 1.4em;
+}
+
+/*ABOUT ME style */
+.about-me {
+  padding: 250px 70px 0px;
+  display: flex;
+}
+.first-col {
+  flex: 0 1 0;
+}
+
+.second-col {
+  flex: 1;
+}
+.content-all {
+  text-align: center;
+}
+.content-all h2 {
+  font-size: 3em;
+  margin: -10px 0 0;
+}
+.about-me img {
+  height: 40vh;
+  border-radius: 45vh;
+  float: left;
+  margin: -10px 30px 0;
+}
+.content-all {
+  padding: 0 40px;
+}
+.just-content {
+  line-height: 2;
+  margin: 30px 0 0;
+  font-family: 'Quattrocento Sans', helvetica;
+  font-size: 1.2rem;
+}
+
+/* CS style */
+.cs {
+  display: flex;
+  padding: 120px 30px;
+  list-style: none;
+  height: 40vh;
+}
+.projects {
+  flex: 1;
+  list-style: none;
+}
+.project {
+  height: 30vh;
+  width: 40vh;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+  font-size: 3em;
+  text-decoration: none;
+  position: relative;
+}
+.project p {
+  font-size: 1rem;
+}
+.project-name {
+  margin: 0;
+  padding: 10px;
+  font-size: 2em;
+  color: #000;
+  border: 2px solid #d83c78;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s ease-out;
+}
+.project-name:hover {
+  background: #d83c78;
+}
+.project-content {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ha Nguyen</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>
+<title>Ha Nguyen</title>
+<link href="/images/favicon.png" rel="icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bree+Serif|Catamaran|Crimson+Text|Karla|Noto+Serif|Quattrocento+Sans|Questrial|Rubik" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 
 <body>
   <header class="header">
   <nav>
     <ul class="header-nav nav-links">
-      <li><a href="/">Home</a></li>
-<li><a href="/about-me">About me</a></li>
-<li><a href="/writings">Writings</a></li>
-<li><a href="/contact">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+<li><a href="#about-me">About me</a></li>
+<li><a href="#cs-projects">CS Projects + Technologies</a></li>
+<li><a href="#writings">Writings</a></li>
+<li><a href="https://goo.gl/forms/Eokzx2D0gcwrSjAn1">Contact</a></li>
 
     </ul>
   </nav>
@@ -30,7 +62,12 @@
       <h2>The unnoticed</h2>
       <div class="post-byline">
         <img src="/images/Emma2.jpg">
-        <a href="https://www.facebook.com/emma.nguyen28" class="social-link">fb</a>
+        <a href="https://www.facebook.com/emma.nguyen28" class="social-link">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="https://github.com/emmanguyen28" class="social-link">
+        <i class="fa fa-github"></i>
+      </a>
         written by: HA NGUYEN
         <span> - October, 04, 2017</span>
       </div>
@@ -46,7 +83,7 @@
   </li>
   
   <li>
-    <a href="/2017/11/15/Memoir.html">C'est m'enfance</a>
+    <a href="/2017/11/15/Memoir.html">M'enfance</a>
     <span>Posted: November 15 2017</span>
   </li>
   
@@ -91,20 +128,24 @@
   </div>
 
   <footer class="footer">
-  <a class="footer-logo" href="/">
-    <img src="/images/Emma.jpg" alt="Emma Nguyen"/>
-  </a>
-  <nav>
-    <ul class="footer-nav nav-links">
-      <li><a href="/">Home</a></li>
-<li><a href="/about-me">About me</a></li>
-<li><a href="/writings">Writings</a></li>
-<li><a href="/contact">Contact</a></li>
+  <div class="footer-components">
+    <a class="footer-logo" href="/">
+      <img src="/images/Emma3.jpg" alt="Emma Nguyen"/>
+    </a>
+    <nav>
+      <ul class="footer-nav nav-links">
+        <li><a href="#home">Home</a></li>
+<li><a href="#about-me">About me</a></li>
+<li><a href="#cs-projects">CS Projects + Technologies</a></li>
+<li><a href="#writings">Writings</a></li>
+<li><a href="https://goo.gl/forms/Eokzx2D0gcwrSjAn1">Contact</a></li>
 
-    </ul>
-  </nav>
-  <h2>Ha Nguyen (Emma)</h2>
+      </ul>
+    </nav>
+    <h2>Ha Nguyen (Emma)</h2>
+  </div>
 </footer>
 
+  
 </body>
 </html>
