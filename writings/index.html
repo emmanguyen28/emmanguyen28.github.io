@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="site">
+  <div class="page blog-index">
+    <h1>Writings</h1>
+    <h5>I have always a fascination with writing, with its power to facilitate communication, understanding, and interaction.</h5><br/>
+
+    <div class="col-two blog-cols">
+
+      <div class="col-aside blog-recent">
+        {% include recent-posts.html %}
+      </div>
+
+      <div class="col-content blog-previews">
+        {% for post in site.posts %}
+        <div class="blog-posts">
+          <header class="post-header">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <div class="post-byline">
+              <img src="{{ post.image }}" />
+              <a href="https://www.facebook.com/emma.nguyen28" class="social-link">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="https://github.com/emmanguyen28" class="social-link">
+                <i class="fa fa-github"></i>
+              </a>
+              written by: {{ post.author }}
+              <span> - {{ post.date | date: '%B, %d, %Y' }}</span>
+            </div>
+          </header>
+          <div class="posts-image" style="background-image:url({{ post.image }})">
+          </div class="post-excerpt">
+          {{ post.excerpt }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
